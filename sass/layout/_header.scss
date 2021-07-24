@@ -15,6 +15,7 @@
     100% 75%,
     0 100%
   ); /* cutting image (4 corners - x y )*/
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
   &__logo-box {
     position: absolute;
