@@ -7,7 +7,19 @@
 }
 
 html {
-  font-size: 62.5%; //define 1rem
+  font-size: 62.5%; //define 1rem = 10px ; 10px/16px = 62.5%
+
+  @include responsive(tab-land) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include responsive(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16 = 75%
+  }
 }
 
 body {
@@ -18,4 +30,8 @@ body {
   padding: 3rem;
 
   box-sizing: border-box; /* no extra padding and margin to box */
+
+  @include responsive(tab-port) {
+    padding: 0;
+  }
 }

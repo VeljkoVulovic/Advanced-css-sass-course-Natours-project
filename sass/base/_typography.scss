@@ -15,6 +15,11 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
+    @include responsive(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
+
     /*
       animation-delay: 3s;
       animation-iteration-count: 3;
@@ -30,6 +35,11 @@
     animation: moveInRight 1s ease-out;
     text-align: left;
     font-style: italic;
+
+    @include responsive(phone) {
+      letter-spacing: 0.5rem;
+      font-family: 5rem;
+    }
   }
 }
 
@@ -48,6 +58,14 @@
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+
+  @include responsive(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(1deg) skewX(5deg) scale(1.1);

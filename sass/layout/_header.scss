@@ -12,10 +12,20 @@
   clip-path: polygon(
     0 0,
     100% 0,
-    100% 75%,
+    100% 75vh,
     0 100%
   ); /* cutting image (4 corners - x y )*/
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include responsive(phone) {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 85vh,
+      0 100%
+    ); /* cutting image (4 corners - x y )*/
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;
