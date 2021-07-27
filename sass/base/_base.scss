@@ -23,15 +23,15 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-gray-dark;
   padding: 3rem;
-
   box-sizing: border-box; /* no extra padding and margin to box */
 
   @include responsive(tab-port) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $color-primary;
+  color:$color-white;
 }

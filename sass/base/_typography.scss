@@ -1,3 +1,10 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-gray-dark;
+}
+
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
@@ -53,8 +60,8 @@
     $color-primary-light,
     $color-primary-dark
   );
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
@@ -77,6 +84,10 @@
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
+
+  @include responsive(phone) {
+    text-align: center;
+  }
 }
 
 .paragraph {

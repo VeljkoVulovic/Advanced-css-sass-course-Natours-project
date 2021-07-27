@@ -10,6 +10,17 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @include responsive(phone) {
+    text-align: center;
+  }
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
   &__content {
     @include absCenter;
     width: 75%;
@@ -26,6 +37,10 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include responsive(phone) {
+      display: none;
+    }
   }
 
   &__right {
@@ -56,6 +71,10 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include responsive(phone) {
+      margin-top: 3.5rem;
+    }
   }
 
   //open states
